@@ -1,0 +1,60 @@
+SetInitialTime	2023-05-31_07:00:00
+Add	SmartPlug	Plug1
+Add	SmartPlug	Plug2	On
+Add	SmartPlug	Plug3	Off
+Add	SmartCamera	Camera1	100
+Add	SmartCamera	Camera2	150	On
+Add	SmartCamera	Camera3	125	Off
+Add	SmartLamp	Lamp1
+Add	SmartLamp	Lamp2	On
+Add	SmartLamp	Lamp3	Off
+Add	SmartLamp	Lamp4	On	2700	50
+Add	SmartLamp	Lamp5	Off	4500	90
+Add	SmartColorLamp	CLamp1
+Add	SmartColorLamp	CLamp2	On
+Add	SmartColorLamp	CLamp3	Off
+Add	SmartColorLamp	CLamp4	On	6000	75
+Add	SmartColorLamp	CLamp5	Off	3000	25
+Add	SmartColorLamp	CLamp6	On	0xABCDEF	35
+Add	SmartColorLamp	CLamp7	Off	0x123456	35
+ZReport
+SetSwitchTime	Camera2	2023-05-31_12:13:14
+SetSwitchTime	Camera3	2023-05-31_12:13:14
+ZReport
+Nop
+ZReport
+SetTime	2023-05-31_12:15:00
+ChangeName	Camera3	Camera30
+ZReport
+PlugIn	Plug1	5
+PlugIn	Plug2	10
+PlugIn	Plug3	15
+SetKelvin	CLamp6	3500
+SetKelvin	Lamp3	5000
+SetColorCode	CLamp4	0xAB12FA
+SetBrightness	Lamp1	30
+SetBrightness	CLamp1	50
+SetWhite	CLamp2	4300	90
+SetWhite	Lamp2	3900	70
+SetColor	CLamp7	0x345678	93
+SkipMinutes	15
+ZReport
+Switch	Plug2	Off
+Switch	Plug3	On
+SkipMinutes	5
+ZReport
+PlugOut	Plug2
+SkipMinutes	20
+ZReport
+SetTime	2023-06-01_07:00:00
+ZReport
+SetTime	2023-06-01_14:00:00
+Switch	Camera2	On
+SetSwitchTime	Camera2	2023-06-01_15:00:00
+SetTime	2023-06-01_16:00:00
+ZReport
+Remove	CLamp3
+Remove	Plug2
+Remove	Lamp4
+Remove	CLamp2
+ZReport

@@ -1,0 +1,71 @@
+SetInitialTime	2023-04-21_14:00:00
+Add	SmartPlug	Plug1
+Add	SmartPlug
+Add	SmartCamera
+Add	SmartLamp
+Add	SmartColorLamp
+SkipMinutes
+SetColor
+SetKelvin
+ChangeName
+SetTime
+SetInitialTime	2023-04-21_15:00:
+Remove
+ZReport
+ABCDEFGH
+Add	SmartPlug	Plug1
+Add	SmartPlug	Plug2	Bom
+Add	SmartPlug	Plug3	123
+Add	SmartCamera	Camera1	-300
+Add	SmartCamera	Camera1	150
+Add	SmartCamera	Camera2	0	On
+Add	SmartCamera	Camera3	ABC	Off
+Add	SmartLamp	Lamp1
+Add	SmartLamp	Lamp1
+Add	SmartLamp	Lamp2	xyz
+Add	SmartLamp	Lamp3	jkl
+Add	SmartLamp	Lamp4	On	0x123456	50
+Add	SmartLamp	Lamp5	Off	4500	780
+Add	SmartLamp	Lamp6	Off	-3000	780
+Add	SmartColorLamp	CLamp1
+Add	SmartColorLamp	CLamp2	---
+Add	SmartColorLamp	CLamp3	N/A
+Add	SmartColorLamp	CLamp4	On	6000	130
+Add	SmartColorLamp	CLamp5	Off	9000	25
+Add	SmartColorLamp	CLamp6	On	0xABCDEF	35
+Add	SmartColorLamp	CLamp7	Off	0x123456	35
+Add	SmartColorLamp	CLamp8	Off	0x1234567	35
+Add	SmartColorLamp	CLamp8	Off	0xFFFFFG	35
+ZReport
+SkipMinutes	-30
+SkipMinutes	ABC
+SkipMinutes	50
+PlugIn	Plug1	-40
+PlugIn	Plug1	ABC
+PlugIn	Plug1	100
+SkipMinutes	10
+ZReport
+PlugOut	Plug1	300
+PlugOut	Plug1
+ZReport
+SetKelvin	Lamp1	0x123456
+SetKelvin	CLamp1	0x123456
+SetBrightness	Lamp1	300
+SetBrightness	CLamp1	-500
+SetBrightness	Lamp1	50.5
+SetBrightness	Lamp1	50,5
+SetBrightness	Lamp1	ABCDEF
+SetColorCode	Lamp1	0x123456
+SetColorCode	Clamp1	4500
+SetWhite	Lamp1	7000	540
+SetWhite	CLamp1	8000	700
+SetColor	Lamp1	0x123456	100
+SetColor	Clamp1	0x1234567	100
+SetColor	CLamp1	0x123456	200
+ZReport
+ChangeName	CLamp2	CLamp20
+ChangeName	CLamp1	Lamp1
+ChangeName	CLamp1	Lamp30
+Remove	CLamp20
+Remove	CLamp2
+Remove	Lamp30
